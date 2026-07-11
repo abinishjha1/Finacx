@@ -1,0 +1,290 @@
+.contactLayout {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: var(--space-16) var(--container-padding);
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: var(--space-12);
+}
+
+/* Hero Icons */
+.heroIcons {
+  display: flex;
+  gap: var(--space-8);
+  margin-top: var(--space-8);
+}
+.heroIconItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  text-align: center;
+}
+.heroIconLabel {
+  font-size: var(--text-xs);
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 500;
+}
+.heroPhone {
+  position: absolute;
+  right: var(--container-padding);
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(12px);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  text-align: center;
+  border: 1px solid rgba(255,255,255,0.15);
+}
+.heroPhoneLabel {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: var(--space-2);
+}
+.heroPhoneNumber {
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: white;
+  margin-bottom: var(--space-2);
+}
+.heroPhoneTime {
+  font-size: var(--text-xs);
+  color: rgba(255,255,255,0.6);
+}
+
+/* Contact Form */
+.formSection {
+  background: white;
+}
+.formTitle {
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  margin-bottom: var(--space-8);
+}
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-5);
+}
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+.formGroupFull {
+  grid-column: 1 / -1;
+}
+.formLabel {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-text);
+}
+.required {
+  color: var(--color-primary);
+}
+.formInput {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-sm);
+  background: white;
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+.formInput:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-bg);
+}
+.formTextarea {
+  min-height: 120px;
+  resize: vertical;
+}
+.formPrivacy {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  margin-top: var(--space-4);
+}
+.formPrivacyIcon {
+  color: var(--color-primary);
+}
+.formSubmit {
+  margin-top: var(--space-6);
+}
+
+/* Other Ways */
+.otherWays {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+.otherWaysTitle {
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  margin-bottom: var(--space-4);
+}
+.contactMethod {
+  display: flex;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+}
+.contactMethod:hover {
+  border-color: var(--color-primary-border);
+  box-shadow: var(--shadow-sm);
+}
+.contactMethodIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: var(--color-primary-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.contactMethodTitle {
+  font-weight: 600;
+  font-size: var(--text-sm);
+  margin-bottom: var(--space-1);
+}
+.contactMethodValue {
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: var(--space-1);
+}
+.contactMethodNote {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}
+
+/* Offices */
+.officesSection {
+  padding: var(--space-16) 0;
+  background: var(--color-bg-alt);
+}
+.officesGrid {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-8);
+}
+.officeCard {
+  background: white;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  transition: all var(--transition-base);
+}
+.officeCard:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-4px);
+}
+.officeMap {
+  width: 100%;
+  height: 160px;
+  background: linear-gradient(135deg, #e8e8e8, #d0d0d0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+.officeInfo {
+  padding: var(--space-5);
+}
+.officeCity {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  margin-bottom: var(--space-3);
+}
+.officeCityDot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background: var(--color-primary);
+}
+.officeAddress {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: var(--space-4);
+  white-space: pre-line;
+}
+.officeContact {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+.officeContactItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--color-primary);
+}
+
+/* Career CTA */
+.careerCta {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: var(--space-12) var(--container-padding);
+}
+.careerCtaInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--color-bg-alt);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8) var(--space-10);
+  border: 1px solid var(--color-border);
+}
+.careerCtaContent {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+.careerCtaIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  background: var(--color-primary-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.careerCtaTitle {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: 700;
+}
+.careerCtaSubtitle {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 768px) {
+  .contactLayout { grid-template-columns: 1fr; }
+  .formGrid { grid-template-columns: 1fr; }
+  .officesGrid { grid-template-columns: 1fr; }
+  .careerCtaInner { flex-direction: column; text-align: center; gap: var(--space-4); }
+  .heroIcons { flex-wrap: wrap; gap: var(--space-4); }
+  .heroPhone { position: static; transform: none; margin-top: var(--space-6); }
+}

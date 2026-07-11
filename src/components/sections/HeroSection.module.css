@@ -1,0 +1,92 @@
+.hero {
+  position: relative;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+  color: white;
+  overflow: hidden;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.35;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.1) 100%);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: var(--space-16) var(--container-padding);
+  width: 100%;
+}
+
+.heroTitle {
+  font-family: var(--font-heading);
+  font-size: var(--text-5xl);
+  font-weight: 700;
+  color: white;
+  margin-bottom: var(--space-5);
+  max-width: 600px;
+  line-height: 1.15;
+}
+
+.heroSubtitle {
+  font-size: var(--text-lg);
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 500px;
+  line-height: 1.7;
+  margin-bottom: var(--space-8);
+}
+
+.heroCtas {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+/* Compact variant for inner pages */
+.compact {
+  min-height: 300px;
+}
+
+.compact .heroTitle {
+  font-size: var(--text-4xl);
+}
+
+/* Home hero specific */
+.homeHero {
+  min-height: 560px;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 320px;
+  }
+
+  .heroTitle {
+    font-size: var(--text-3xl);
+  }
+
+  .heroSubtitle {
+    font-size: var(--text-base);
+  }
+
+  .compact {
+    min-height: 260px;
+  }
+
+  .homeHero {
+    min-height: 440px;
+  }
+}
