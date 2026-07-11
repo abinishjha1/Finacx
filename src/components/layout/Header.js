@@ -40,7 +40,7 @@ export default function Header() {
       <div className={styles.headerInner}>
         {/* Logo */}
         <Link href="/" className={styles.logo} aria-label="FinacX Consulting Service - Home">
-          <Image src="/finacx-logo.png" alt="FinacX Consulting Service" width={280} height={85} className={styles.logoImage} priority />
+          <Image src="/finacx-logo-final.png" alt="FinacX Consulting Service" width={280} height={85} className={styles.logoImage} priority />
         </Link>
 
         {/* Desktop Nav */}

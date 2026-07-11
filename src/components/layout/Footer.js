@@ -12,7 +12,7 @@ export default function Footer() {
           {/* Brand Column */}
           <div className={styles.brandCol}>
             <Link href="/" className={styles.logo}>
-              <Image src="/finacx-logo.png" alt="FinacX Consulting Service" width={300} height={90} className={styles.logoImage} />
+              <Image src="/finacx-logo-final.png" alt="FinacX Consulting Service" width={300} height={90} className={styles.logoImage} />
             </Link>
             <p className={styles.brandDesc}>
               Empowering businesses to solve complex challenges, optimize performance, and unlock sustainable growth.
