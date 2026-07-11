@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import styles from './Footer.module.css';
 import { footerQuickLinks, footerServices, socialLinks, contactInfo } from '@/data/navigation';
@@ -11,17 +12,7 @@ export default function Footer() {
           {/* Brand Column */}
           <div className={styles.brandCol}>
             <Link href="/" className={styles.logo}>
-              <div className={styles.logoGrid}>
-                <span className={styles.logoCell}>F</span>
-                <span className={styles.logoCell}>C</span>
-                <span className={styles.logoCell}>S</span>
-                <span className={styles.logoCell}></span>
-              </div>
-              <div className={styles.logoText}>
-                <span>FINACX</span>
-                <span>CONSULTING</span>
-                <span>SERVICE</span>
-              </div>
+              <Image src="/finacx-logo.png" alt="FinacX Consulting Service" width={240} height={75} style={{ objectFit: 'contain', width: 'auto', height: '48px', marginBottom: 'var(--space-4)' }} />
             </Link>
             <p className={styles.brandDesc}>
               Empowering businesses to solve complex challenges, optimize performance, and unlock sustainable growth.

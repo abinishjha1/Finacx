@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import styles from './Header.module.css';
@@ -39,17 +40,7 @@ export default function Header() {
       <div className={styles.headerInner}>
         {/* Logo */}
         <Link href="/" className={styles.logo} aria-label="FinacX Consulting Service - Home">
-          <div className={styles.logoGrid}>
-            <span className={styles.logoCell}>F</span>
-            <span className={styles.logoCell}>C</span>
-            <span className={styles.logoCell}>S</span>
-            <span className={styles.logoCell}></span>
-          </div>
-          <div className={styles.logoText}>
-            <span className={styles.logoTextMain}>FINACX</span>
-            <span className={styles.logoTextMain}>CONSULTING</span>
-            <span className={styles.logoTextMain}>SERVICE</span>
-          </div>
+          <Image src="/finacx-logo.png" alt="FinacX Consulting Service" width={240} height={75} style={{ objectFit: 'contain', width: 'auto', height: '40px' }} priority />
         </Link>
 
         {/* Desktop Nav */}
