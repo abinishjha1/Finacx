@@ -32,57 +32,10 @@
   flex-shrink: 0;
 }
 
-.logoGrid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2px;
-  width: 40px;
-  height: 40px;
-}
-
-.logoCell {
-  background-color: var(--color-primary);
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-body);
-  font-weight: 800;
-  font-size: 11px;
-  line-height: 1;
-}
-
-.logoCell:first-child {
-  border-radius: 4px 0 0 0;
-}
-
-.logoCell:nth-child(2) {
-  border-radius: 0 4px 0 0;
-  background-color: var(--color-bg-dark);
-}
-
-.logoCell:nth-child(3) {
-  border-radius: 0 0 0 4px;
-  background-color: var(--color-bg-dark);
-}
-
-.logoCell:last-child {
-  border-radius: 0 0 4px 0;
-}
-
-.logoText {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.15;
-}
-
-.logoTextMain {
-  font-family: var(--font-body);
-  font-weight: 800;
-  font-size: 11px;
-  color: var(--color-text);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+.logoImage {
+  object-fit: contain;
+  width: auto;
+  height: 56px;
 }
 
 /* Navigation */
@@ -199,5 +152,11 @@
 
   .menuBtn {
     display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .logoImage {
+    height: 42px;
   }
 }
